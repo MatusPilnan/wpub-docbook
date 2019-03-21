@@ -56,10 +56,7 @@ Geografické názvy
             </title>
             <para>
 Samotná doména geografických názvov prináša ďalšie problémy. Jedným z týchto problémov je nejednoznačnosť v názvoch entít rôznych druhov (Zvolen je mesto aj vrch, Nitra je rieka aj mesto a podobne). Ďalším problémom je nejednoznačnosť v rámci kategórie. Toto sa týka najmä názvov vrchov, nakoľko na Slovensku existuje mnoho rôznych vrcholov s rovnakým názvom. (Napríklad Príslop, Malý Javorník). Problém predstavujú aj entity, ktorých názov je zložený z viacerých slov a obsahuje názov inej entity (napríklad z názvu mesta Žiar nad Hronom by sme nemali označiť ako entitu rieku Hron). Niektoré existujúce nástroje však v takýchto prípadoch označia aj celý názov ako jednu entitu, aj časť názvu označujúcu inú entitu 
-                <citation>
-[1]
-                </citation>
- .
+                <citation>1</citation>.
             </para>
         </section>
         <section>
@@ -91,29 +88,17 @@ Lingvistické metódy sú vhodné pri malom počte rozpoznávaných druhov entí
                 </title>
                 <para>
 Štatistické metódy sa zväčša používajú v systémoch s viacerými typmi entít, ktoré sú všeobecnejšie (napríklad lokalita, osoba a pod.) a využívajú metódy strojového učenia. Spravidla sa jedná o učenie s učiteľom, ktoré je pre tento typ úloh najvhodnejšie. Z toho však plynie potreba veľkého množstva anotovaných vstupných dát na správne natrénovanie štatistického modelu. Dostupné systémy pre slovenský jazyk používajú z pohľadu štatistických metód trénovanie metódy výberu 
-                    <citation>
-[2]
-                    </citation>
+                    <citation>2</citation>
 , alebo hybridnú metódu, pri ktorej sa informácie získané lingvistickou metódou používajú ako črty pri ďalšom spracovaní štatistickým modelom natrénovaným na ručne anotovaných dokumentoch 
-                    <citation>
-[3]
-                    </citation>
+                    <citation>3</citation>
 . V nástrojoch pre české texty patria medzi používané štatistické metódy podmienené náhodné polia 
-                    <citation>
-[4][5]
-                    </citation>
+                    <citation>45</citation>
 , algoritmy podporných vektorov 
-                    <citation>
-[6]
-                    </citation>
+                    <citation>6</citation>
  a metóda maximálnej entropie 
-                    <citation>
-[7][8]
-                    </citation>
+                    <citation>78</citation>
 . Metóda podmienených náhodných polí je taktiež použitá v jednom z najznámejších nástrojov na rozpoznávanie pomenovaných entít pre anglický jazyk, Stanford NER 
-                    <citation>
-[9]
-                    </citation>
+                    <citation>9</citation>
 .
                 </para>
             </section>
@@ -131,9 +116,7 @@ Ondrej Kaššák, 2012
                 </title>
                 <para>
 Nástroj na extrakciu pomenovaných entít 
-                    <citation>
-[2]
-                    </citation>
+                    <citation>2</citation>
  sa zameriava na rozpoznávanie osôb, lokalít, organizácií, dátumu a času, číselných entít a všeobecných entít, ktoré sa nehodia do žiadnej z týchto kategórií, pričom využíva predovšetkým lingvistické metódy. Predspracovanie vstupného textu je riešené pomocou stemovania. Pri identifikácii entít využíva databázu rozpoznaných entít z textov spracovaných v minulosti, ako aj databázu entít, ktoré už boli v aktuálne spracovávanom texte  identifikované. Neznáme entity vyhľadáva pomocou databázy názvov článkov z Wikipédie so zodpovedajúcimi kategóriami. Na určenie typu entity sa využíva kategória článku, v ktorom sa vyskytla. Vyhľadávanie medzi skôr nájdenými entitami celý proces urýchľuje a rieši problém označovania tej istej entity rôznymi spôsobmi. Okrem databáz sú v tomto nástroji značne využívané aj kontextové slová a regulárne výrazy. Kontextové slová slúžia na overenie typu entity, s ktorou bola nájdená zhoda v niektorej z databáz. Regulárne výrazy sú použité najmä na identifikáciu číselných a dátumových entít, pri ich určovaní sa taktiež využíva rozhodovací strom. Identifikované entity sú ukladané naspäť do databázy, čím sa táto metóda učí. Metóda bola vyhodnocovaná pomocou F-skóre a dosiahla výsledok 85%.
                 </para>
             </section>
@@ -143,9 +126,7 @@ Filip Bednárik, 2016
                 </title>
                 <para>
 Nástroj na rozpoznávanie pomenovaných entít 
-                    <citation>
-[3]
-                    </citation>
+                    <citation>3</citation>
  rozpoznáva dátumové, časové a číselné údaje, kontaktné a osobné informácie, osoby, firmy, lokality a súdy a je určený predovšetkým pre oblasť justície. Použitú metódu si môže používateľ zvoliť z troch možností: lingvistická, štatistická a hybridná. Pri predspracovaní textu využíva najprv slovníkový lematizátor. V prípade, že pre hľadané slovo lematizátor nedokáže nájsť lemu, použije sa stemer. Pomenované entity potom vyhľadáva na základe slovníkov a regulárnych výrazov. Následne sa zistené typy entít overujú pomocou kontextových slov a iných informácií. Informácie získané týmto lingvistickým postupom následne slúžia ako črty pre klasifikáciu štatistickým modelom. Tento nástroj dosahuje vo svojej doméne priemerné F-skóre 93,8%.
                 </para>
             </section>
@@ -175,28 +156,18 @@ Pre češtinu existujú systémy na vyššej úrovni, ktoré pokrývajú viac dr
 Podmienené náhodné polia
                     </title>
                     <para>
-                        <citation>
-[4][5]
-                        </citation>
+                        <citation>45</citation>
  využívajú podmienené náhodné polia (conditional random fields). Tie sú reprezentované ako konečný stavový model 
-                        <citation>
-[10]
-                        </citation>
+                        <citation>10</citation>
 . Pre klasifikáciu využíva postupnosť dát, ktoré majú byť označené – v našom prípade vstupný text, a postupnosť možných značiek. Výhodou CRF oproti iným štatistickým metódam je, že pri klasifikácii jednej entity berie do úvahy aj ostatné entity vyskytujúce sa v texte. Práca 
-                        <citation>
-[4]
-                        </citation>
+                        <citation>4</citation>
  sa zameriava predovšetkým na dôležitosť výberu správnych čŕt pre klasifikátor založený na CRF. Autor tieto črty rozdeľuje na jazykovo závislé (hlavné mestá, meny, názvy dní a mesiacov, fyzikálne jednotky a pod.) a nezávislé (slovo a jeho okolie, dĺžka slova, je slovo začiatkom vety? a pod.), pričom jazykovo nezávislé majú na úspešnosť vyšší vplyv. Vytvorený nástroj na rozpoznávanie pomenovaných entít dosiahol najlepšie F-skóre 58,4%.
                     </para>
                     <para>
 Nástroj navrhnutý v 
-                        <citation>
-[5]
-                        </citation>
+                        <citation>5</citation>
  klasifikuje entity podľa dvojstupňového rozdelenia navrhnutého v 
-                        <citation>
-[1]
-                        </citation>
+                        <citation>1</citation>
 , známeho ako Czech Named Entity Corpus (CNEC). Pri tomto rozdelení sa vyskytujú entity rovnakej úrovne ako nami zvolené – geografické entity sú jednou z hlavných kategórií rozdelenia, s podkategóriami ako mestá, štáty, vodné plochy a podobne. Tento nástroj preto musí riešiť aj problém zapuzdrenia názvov entít, kedy názov jednej entity obsahuje názov inej (napríklad Žiar nad Hronom – jednou entitou je celý názov označujúci mesto, druhou slovo Hron označujúce rieku). Nástroj v tomto prípade označí ako entity oba názvy. Toto však v našej práci nie je žiadané správanie, nakoľko text v ktorom sa spomína Žiar nad Hronom sa riekou Hron vôbec nemusí zaoberať. Niektoré črty používané pri klasifikácii sú lemy, prípony a predpony slov, slovníky a iné. Tento nástroj dosiahol F-skóre 74,08%
                     </para>
                 </section>
@@ -206,25 +177,15 @@ Metóda maximálnej entropie
                     </title>
                     <para>
 Ďalšími nástrojomi vyvinutými pre české texty sú NameTag  
-                        <citation>
-[7]
-                        </citation>
+                        <citation>7</citation>
  a 
-                        <citation>
-[8]
-                        </citation>
+                        <citation>8</citation>
 , ktoré rozpoznávajú entity rovnakých kategórií ako predchádzajúci uvedený nástroj a sú založené na metóde maximálnej entropie. Princíp tejto metódy je ten, že štatistický model má odrážať všetko čo je známe a zároveň nemôže predpokladať nič o neznámom, teda pri dodržaní všetkých známych obmedzení musí byť rozdelenie možných výstupov čo najrovnomernejšie 
-                        <citation>
-[11]
-                        </citation>
+                        <citation>11</citation>
 . Tento prístup je kombinovaný s metódou sémantických priestorov. V sémantickom priestore tvoria slová jednotlivé body. Vzdialenosť medzi týmito bodmi určuje podobnosť príslušných slov. Nástroj 
-                        <citation>
-[8]
-                        </citation>
+                        <citation>8</citation>
  predpokladá, že pokiaľ je slovo podobné s už známou entitou, tak pravdepodobnosť, že toto slovo je entitou rovnakého typu, je vyššia. Iné používané črty sú morfologické vlastnosti slova, lemy, regulárne výrazy či veľkosť začiatočného písmena. Tento nástroj dosiahol F-skóre 72,94%. NameTag využíva okrem metódy maximálnej entropie aj Viterbiho algoritmus
-                        <citation>
-[12]
-                        </citation>
+                        <citation>12</citation>
 . Celý text analyzuje dvakrát, pričom v druhom behu využíva ako črty výsledky z prvého behu. NameTag dosahuje na českých textoch F-skóre 82,82%
                     </para>
                 </section>
@@ -234,13 +195,9 @@ Algoritmy podporných vektorov
                     </title>
                     <para>
 Pre český jazyk taktiež existuje nástroj využívajúci alogoritmy podporných vektorov 
-                        <citation>
-[6]
-                        </citation>
+                        <citation>6</citation>
 , ktorý pracuje na tej istej skupine typov entít ako predchádzajúce dva uvedené nástroje. Tento prístup využíva reprezentáciu slov ako bodov v priestore. Na základe známych dát je priestor rozdelený priamkou na dve časti tak, aby každá obsahovala len entity jedného typu. Každý z vzniknutých polpriestorov reprezentuje jednu triedu. V prípade že takéto rozdelenie nie je možné, prípustné sú aj entity v nesprávnej kategórii, pri týchto sa musí minimalizovať vzdialenosť od hranice 
-                        <citation>
-[13]
-                        </citation>
+                        <citation>13</citation>
 . Typ nových entít sa následne určí na základe ich polohy v takto rozdelenom priestore. Črty, ktoré klasifikátor v tomto nástroji používa, zahŕňajú morfologické vlastnosti daného slova, začiatočné písmeno, regulárne výrazy, lemy a kontext. F-skóre tohto nástroja dosahuje 68%.
                     </para>
                 </section>
@@ -251,13 +208,9 @@ Porovnanie nástrojov
                 </title>
                 <para>
 V praxi sa na vyhodnotenie úspešnosti systémov na rozpoznávanie pomenovaných entít používa metrika F-skóre. F-skóre vyjadruje harmonický priemer presnosti (precision) a úplnosti (recall) systému 
-                    <citation>
-[14]
-                    </citation>
+                    <citation>14</citation>
 . Precision vyjadruje pomer počtu správne určených entít k celkovému počtu určených entít a recall vyjadruje pomer počtu správne určených entít k celkovému počtu entít ktoré sa v texte vyskytovali 
-                    <citation>
-[15]
-                    </citation>
+                    <citation>15</citation>
 . Hodnoty F-skóre uvedené pri nástrojoch sú dosiahnuté výsledky uvádzané autormi jednotlivých nástrojov.
                 </para>
                 <para>
@@ -268,13 +221,9 @@ Vety boli vyberané z článkov na portáloch: https://www.topky.sk/, https://s
                         </para>
                     </footnote>
 . Tieto vety obsahovali dokopy 123 entít, z toho 55 slovenských obcí, 27 vrchov, 21 riek a 20 iných entít. Z nástrojov pre slovenčinu sme testovali 
-                    <citation>
-[3]
-                    </citation>
+                    <citation>3</citation>
  a NLP4SK, nástroj 
-                    <citation>
-[2]
-                    </citation>
+                    <citation>2</citation>
  sa nám nepodarilo použiť. Pre porovnanie sme testovali aj nástroj NameTag, určený pre český jazyk. Za správne určenú entitu sme považovali takú, ktorá mala správne určený rozsah aj typ.
                 </para>
                 <table>
@@ -389,9 +338,7 @@ NLP4SK
                 </table>
                 <para>
 Z výsledkov testovania nástrojov vyplýva, že nad doménou geografických názvov najlepšie pracuje nástroj NLP4SK. Nástroj 
-                    <citation>
-[3]
-                    </citation>
+                    <citation>3</citation>
  často označoval ako entity slová, ktoré nimi neboli, väčšinou začiatky viet – pravdepodobne kvôli veľkým písmenám. Častým problémom bolo aj označenie správneho slova, no určenie nesprávneho typu entity – väčšina slov bola označená ako osoba. Ďalším problémom bolo označovanie miest ako súdov, čo je pravdepodobne spôsobené zameraním nástroja na oblasť súdnictva. V niekoľkých prípadoch nástroj správne určil typ, no rozsah nie, napríklad postupnosť názvov miest oddelených čiarkami označil ako jednu adresu. Nástroj NameTag často označoval geografické názvy ako mená osôb. Problém mal s vrchmi aj menej známymi obcami. Nižšia úspešnosť tohto nástroja sa dala predpokladať, nakoľko bol navrhnutý pre češtinu, ktorá má mierne odlišné pravidlá skloňovania, čo mohlo byť jednou z príčin neúspechu pri vyskloňovaných názvoch. Relatívne vysoká úspešnosť nástroja NLP4SK bola spôsobená aj tým, že v prípadoch, keď nájdená entita môže patriť do viacerých kategórií, nástroj vráti všetky. Pri testovaní sme za správne označenú entitu považovali tú, ktorá mala medzi vrátenými kategóriami tú správnu. Text použitý pri testovaní nástrojov s označenými výstupmi jednotlivých nástrojov je v Prílohe B.
                 </para>
             </section>
@@ -492,9 +439,7 @@ Prototyp
             </title>
             <para>
 Aplikáciu sme sa rozhodli vytvoriť v programovacom jazyku Python. Prvý prototyp aplikácie najprv pomocou webového lematizéra 
-                <citation>
-[3]
-                </citation>
+                <citation>3</citation>
  predspracuje vstupný text. Následne sa text spracováva po vetách. Pre každé slovo sa najprv overí, či sa začína veľkým písmenom. Pokiaľ áno, označí sa toto slovo ako možný začiatok entity – kandidát. K názvu takto vytvoreného kandidátova sa pridajú aj všetky nasledujúce slová začínajúce veľkým písmenom.
             </para>
             <para>
@@ -557,79 +502,49 @@ Použitá literatúra
         </title>
         <bibliolist>
             <bibliomixed>
-            <abbrev>
-[1]
-            </abbrev>
+            <abbrev>1</abbrev>
 Named entities in Czech: annotating data and developing NE tagger. ŠEVČÍKOVÁ, Magda, ŽABOKRTSKÝ, Zdeněk a KRUZA, Oldřich. 2007. International Conference on Text, Speech and Dialogue. s. 188-195.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [2]
-            </abbrev>
+            <bibliomixed><abbrev>2</abbrev>
 KAŠŠÁK, Ondrej. Extrakcia pomenovaných entít zo slovenského textu. 2012.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [3]
-            </abbrev>
+            <bibliomixed><abbrev>3</abbrev>
 BEDNÁRIK, Filip. Extrakcia informácií z textu. Fakulta Informatiky a Informačných Technológií STU v Bratislave. 2016. Master's thesis.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [4]
-            </abbrev>
+            <bibliomixed><abbrev>4</abbrev>
 KRÁL, Pavel. Features for named entity recognition in czech. s.l. : KEOD, 2011.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [5]
-            </abbrev>
+            <bibliomixed><abbrev>5</abbrev>
 CRF-based Czech named entity recognizer and consolidation of Czech NER research. KONKOL, Michal a KONOPÍK, Miloslav. 2013. International Conference on Text, Speech and Dialogue. s. 153-160.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [6]
-            </abbrev>
+            <bibliomixed><abbrev>6</abbrev>
 Czech named entity corpus and SVM-based recognizer. KRAVALOVÁ, Jana a ŽABOKRTSKÝ, Zdeněk. 2009. Proceedings of the 2009 Named Entities Workshop: Shared Task on Transliteration. s. 194-201.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [7]
-            </abbrev>
+            <bibliomixed><abbrev>7</abbrev>
 A new state-of-the-art czech named entity recognizer. STRAKOVÁ, Jana, STRAKA, Milan a HAJIČ, Jan. 2013. International Conference on Text, Speech and Dialogue. s. 68-75.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [8]
-            </abbrev>
+            <bibliomixed><abbrev>8</abbrev>
 Maximum entropy named entity recognition for Czech language. KONKOL, Michal a KONOPÍK, Miloslav. 2011. International Conference on Text, Speech and Dialogue. s. 203-210.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [9]
-            </abbrev>
+            <bibliomixed><abbrev>9</abbrev>
 Incorporating non-local information into information extraction systems by gibbs sampling. FINKEL, Jenny Rose, GRENAGER, Trond a MANNING, Christopher. 2005. Proceedings of the 43rd annual meeting on association for computational linguistics. s. 363-370.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [10]
-            </abbrev>
+            <bibliomixed><abbrev>10</abbrev>
 Conditional random fields: Probabilistic models for segmenting and labeling sequence data. LAFFERTY, John, MCCALLUM, Andrew a PEREIRA, Fernando C. N. 2001.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [11]
-            </abbrev>
+            <bibliomixed><abbrev>11</abbrev>
 A maximum entropy approach to natural language processing. BERGER, Adam L., PIETRA, Vincent J. Della a PIETRA, Stephen A. Della. s.l. : MIT Press, 1996, Computational linguistics, Zv. 22, s. 39-71.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [12]
-            </abbrev>
+            <bibliomixed><abbrev>12</abbrev>
 The viterbi algorithm. FORNEY, G. David. s.l. : IEEE, 1973, Proceedings of the IEEE, Zv. 61, s. 268-278.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [13]
-            </abbrev>
-Support vector machines. MOORE, Andrew W. 2001, Tutorial. School of Computer Science of the Carnegie Mellon University. Available at http://www. cs. cmu. edu/ ̃ awm/tutorials.[Accessed August 16, 2009].
+            <bibliomixed><abbrev>13</abbrev>
+Support vector machines. MOORE, Andrew W. 2001, Tutorial. School of Computer Science of the Carnegie Mellon University. Available at http://www. cs. cmu. edu/ ̃ awm/tutorials.Accessed August 16, 2009.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [14]
-            </abbrev>
+            <bibliomixed><abbrev>14</abbrev>
 The truth of the F-measure. SASAKI, Yutaka a others. 2007, Teach Tutor mater, Zv. 1, s. 1-5.
             </bibliomixed>
-            <bibliomixed><abbrev>
-            [15]
-            </abbrev>
+            <bibliomixed><abbrev>15</abbrev>
 MUC-4 evaluation metrics. CHINCHOR, Nancy. 1992. Proceedings of the 4th conference on Message understanding. s. 22-29.
             </bibliomixed>
             <div xmlns="http://www.w3.org/1999/xhtml" class="role-footnotes">
