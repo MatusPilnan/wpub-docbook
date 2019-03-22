@@ -552,48 +552,6 @@ The truth of the F-measure. SASAKI, Yutaka a others. 2007, Teach Tutor mater, Zv
                 <abbrev>15</abbrev>
 MUC-4 evaluation metrics. CHINCHOR, Nancy. 1992. Proceedings of the 4th conference on Message understanding. s. 22-29.
             </bibliomixed>
-            <div xmlns="http://www.w3.org/1999/xhtml" class="role-footnotes">
-                <div class="role-footnote" id="__FN1__">
-                    <p>
-http://arl6.library.sk/nlp4sk/
-                    </p>
-                </div>
-                <div class="role-footnote" id="__FN2__">
-                    <p>
-Vety boli vyberané z článkov na portáloch: https://www.topky.sk/, https://sportky.zoznam.sk/, https://dromedar.zoznam.sk/, https://hiking.sk/, http://www.reny.sk/ a http://www.slovakiasite.com/sk/rieky.php
-                    </p>
-                </div>
-                <div class="role-footnote" id="__FN3__">
-                    <p>
-https://developers.google.com/knowledge-graph/
-                    </p>
-                </div>
-                <div class="role-footnote" id="__FN4__">
-                    <p>
-https://googleblog.blogspot.com/2012/05/introducing-knowledge-graph-things-not.html
-                    </p>
-                </div>
-                <div class="role-footnote" id="__FN5__">
-                    <p>
-https://cloud.google.com/natural-language/docs/languages
-                    </p>
-                </div>
-                <div class="role-footnote" id="__FN6__">
-                    <p>
-https://www.openstreetmap.org/about
-                    </p>
-                </div>
-                <div class="role-footnote" id="__FN7__">
-                    <p>
-https://opendatacommons.org/licenses/odbl/
-                    </p>
-                </div>
-                <div class="role-footnote" id="__FN8__">
-                    <p>
-https://wiki.openstreetmap.org/wiki/Osm2pgsql
-                    </p>
-                </div>
-            </div>
         </bibliolist>
     </chapter>
     <index />
