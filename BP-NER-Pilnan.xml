@@ -25,16 +25,17 @@ URČOVANIE ENTÍT V TEXTE POMOCOU WEBU
         <publishername>
 Slovenská technická univerzita v Bratislave
         </publishername>
+        <abstract>
+            <title>Zadanie</title>
+            <para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="BP-NER-Pilnan_files/image1.jpeg" contentwidth="601" contentdepth="778" align="center"/>
+                    </imageobject>
+                </mediaobject>
+            </para>
+        </abstract>
     </bookinfo>
-    <preface>
-        <para>
-            <inlinemediaobject>
-                <imageobject>
-                    <imagedata fileref="BP-NER-Pilnan_files/image1.jpeg" contentwidth="601" contentdepth="778"/>
-                </imageobject>
-            </inlinemediaobject>
-        </para>
-    </preface>
     <chapter>
         <title>
 Určovanie pomenovaných entít
@@ -138,7 +139,7 @@ NLP4SK
 NLP4SK je súbor nástrojov na spracovanie textu v slovenčine, ktoré je možné použiť ako REST služby
                     <footnote id="__FN1__">
                         <para>
-http://arl6.library.sk/nlp4sk/
+                        <ulink url="http://arl6.library.sk/nlp4sk/" />
                         </para>
                     </footnote>
 .  Jednou z poskytovaných funkcionalít je aj rozpoznávanie pomenovaných entít. Tento nástroj dokáže rozpoznávať aj typy entít na úrovni, ktorú sme si zvolili pre našu prácu, teda rozlišuje lokality okrem iného aj na obce, vodné plochy a vrchy. Nástroj je založený na slovníkoch. Pokiaľ nájdená entita vyhovuje viacerým typom, vrátia sa všetky. O bližšom fungovaní týchto nástrojov sa nám nepodarilo získať žiadne materiály.
@@ -217,7 +218,7 @@ V praxi sa na vyhodnotenie úspešnosti systémov na rozpoznávanie pomenovaný
 Prvé dva z uvedených nástrojov sa zameriavajú na entity vyššej úrovne ako sú tie, ktoré sme si stanovili v našej práci. Vybrané nástroje sme testovali na vzorke 48 viet z rôznych článkov
                     <footnote id="__FN2__">
                         <para>
-Vety boli vyberané z článkov na portáloch: https://www.topky.sk/, https://sportky.zoznam.sk/, https://dromedar.zoznam.sk/, https://hiking.sk/, http://www.reny.sk/ a http://www.slovakiasite.com/sk/rieky.php
+Vety boli vyberané z článkov na portáloch: <ulink url="https://www.topky.sk/" />, <ulink url="https://sportky.zoznam.sk/" />, <ulink url="https://dromedar.zoznam.sk/" />, <ulink url="https://hiking.sk/" />, <ulink url="http://www.reny.sk/" /> a <ulink url="http://www.slovakiasite.com/sk/rieky.php" />
                         </para>
                     </footnote>
 . Tieto vety obsahovali dokopy 123 entít, z toho 55 slovenských obcí, 27 vrchov, 21 riek a 20 iných entít. Z nástrojov pre slovenčinu sme testovali 
@@ -350,22 +351,21 @@ Knowledge Graph
 Google Knowledge Graph
                     <footnote id="__FN3__">
                         <para>
-https://developers.google.com/knowledge-graph/
+                        <ulink url="https://developers.google.com/knowledge-graph/" />
                         </para>
                     </footnote>
  je grafová databáza vytvorená spoločnosťou Google za účelom zvýšenia kvality výsledkov vyhľadávania. Skladá sa z entít a vzťahov medzi nimi (znalostí). Počet entít, ktoré pozná sa pohybuje v stovkách miliónov, a počet znalostí rádovo v desiatkach miliárd
                     <footnote id="__FN4__">
                         <para>
-https://googleblog.blogspot.com/2012/05/introducing-knowledge-graph-things-not.html
+                        <ulink url="https://googleblog.blogspot.com/2012/05/introducing-knowledge-graph-things-not.html" />
                         </para>
                     </footnote>
 . Medzi tieto entity patria aj slovenské obce, rieky a vrchy. Táto technológia však nie je navrhnutá priamo na určenie entít v texte, ale na vyhľadanie konkrétnej entity, určenie jej typu a iných informácií o nej. Pri použití Knowledge Graph-u by sme teda rovnako museli predspracovať text, keďže napriek podpore slovenských entít ich dokáže správne vyhľadať iba podľa základného tvaru. Môže sa však hodiť pri validácii navrhnutého riešenia. Spoločnosť Google taktiež ponúka metódy na spracovanie prirodzeného jazyka, okrem iného aj na extrakciu pomenovaných entít, no tieto v súčasnosti slovenčinu nepodporujú
                     <footnote id="__FN5__">
                         <para>
-https://cloud.google.com/natural-language/docs/languages
+                        <ulink url="https://cloud.google.com/natural-language/docs/languages" />
                         </para>
                     </footnote>
-.  
                 </para>
             </section>
             <section>
@@ -376,13 +376,13 @@ Open Street Map
 Pre doménu geografických entít sa zdá byť vhodné použitie mapových dát. Projekt Open Street Map (OSM)
                     <footnote id="__FN6__">
                         <para>
-https://www.openstreetmap.org/about
+                        <ulink url="https://www.openstreetmap.org/about" />
                         </para>
                     </footnote>
  je jeden z možných zdrojov takýchto dát. Jedná sa o komunitný projekt zameraný na vytváranie a údržbu mapových podkladov po celom svete. Tieto dáta sú voľne dostupné pod licenciou Open Data Commons Open Database License
                     <footnote id="__FN7__">
                         <para>
-https://opendatacommons.org/licenses/odbl/
+                        <ulink url="https://opendatacommons.org/licenses/odbl/" />
                         </para>
                     </footnote>
 . Dáta z OSM obsahujú okrem vrchov, obcí a riek aj mnoho iných entít, ako sú napríklad ulice, pamiatky, vodné plochy, ale aj inštitúcie, zastávky hromadnej dopravy či reštaurácie, a mnohé iné objekty, ktoré môžu byť zakreslené do mapy. Okrem samotného názvu sa priamo z týchto dát dajú získať aj iné informácie, ako je poloha, nadmorská výška alebo počet obyvateľov mesta.
@@ -396,7 +396,7 @@ Osm2pgsql
 Dáta z OSM je možné jednoducho importovať do relačnej databázy.
                     <footnote id="__FN8__">
                         <para>
-https://wiki.openstreetmap.org/wiki/Osm2pgsql
+                        <ulink url="https://wiki.openstreetmap.org/wiki/Osm2pgsql" />
                         </para>
                     </footnote>
  Po importovaní dát získame v databáze šesť tabuliek. Najdôležitejšie mapové dáta sú uložené v tabuľkách planet_osm_line, _point, _polygon a _roads. V príslušných tabuľkách sú uložené objekty, ktoré by na mape boli vykreslené ako čiary, body a polygóny. Tabuľka planet_osm_roads obsahuje dáta z ostatných tabuliek. Pre nás sú dôležité tabuľky planet_osm_line a planet_osm_point, keďže rieky sú vykresľované ako čiary a vrchy aj obce ako body. Obe tabuľky majú 69 stĺpcov s rôznymi údajmi o jednotlivých objektoch. Pre nás sú dôležité nasledujúce stĺpce:
@@ -502,49 +502,63 @@ Použitá literatúra
         </title>
         <bibliolist>
             <bibliomixed>
-            <abbrev>1</abbrev>
+                <abbrev>1</abbrev>
 Named entities in Czech: annotating data and developing NE tagger. ŠEVČÍKOVÁ, Magda, ŽABOKRTSKÝ, Zdeněk a KRUZA, Oldřich. 2007. International Conference on Text, Speech and Dialogue. s. 188-195.
             </bibliomixed>
-            <bibliomixed><abbrev>2</abbrev>
+            <bibliomixed>
+                <abbrev>2</abbrev>
 KAŠŠÁK, Ondrej. Extrakcia pomenovaných entít zo slovenského textu. 2012.
             </bibliomixed>
-            <bibliomixed><abbrev>3</abbrev>
+            <bibliomixed>
+                <abbrev>3</abbrev>
 BEDNÁRIK, Filip. Extrakcia informácií z textu. Fakulta Informatiky a Informačných Technológií STU v Bratislave. 2016. Master's thesis.
             </bibliomixed>
-            <bibliomixed><abbrev>4</abbrev>
+            <bibliomixed>
+                <abbrev>4</abbrev>
 KRÁL, Pavel. Features for named entity recognition in czech. s.l. : KEOD, 2011.
             </bibliomixed>
-            <bibliomixed><abbrev>5</abbrev>
+            <bibliomixed>
+                <abbrev>5</abbrev>
 CRF-based Czech named entity recognizer and consolidation of Czech NER research. KONKOL, Michal a KONOPÍK, Miloslav. 2013. International Conference on Text, Speech and Dialogue. s. 153-160.
             </bibliomixed>
-            <bibliomixed><abbrev>6</abbrev>
+            <bibliomixed>
+                <abbrev>6</abbrev>
 Czech named entity corpus and SVM-based recognizer. KRAVALOVÁ, Jana a ŽABOKRTSKÝ, Zdeněk. 2009. Proceedings of the 2009 Named Entities Workshop: Shared Task on Transliteration. s. 194-201.
             </bibliomixed>
-            <bibliomixed><abbrev>7</abbrev>
+            <bibliomixed>
+                <abbrev>7</abbrev>
 A new state-of-the-art czech named entity recognizer. STRAKOVÁ, Jana, STRAKA, Milan a HAJIČ, Jan. 2013. International Conference on Text, Speech and Dialogue. s. 68-75.
             </bibliomixed>
-            <bibliomixed><abbrev>8</abbrev>
+            <bibliomixed>
+                <abbrev>8</abbrev>
 Maximum entropy named entity recognition for Czech language. KONKOL, Michal a KONOPÍK, Miloslav. 2011. International Conference on Text, Speech and Dialogue. s. 203-210.
             </bibliomixed>
-            <bibliomixed><abbrev>9</abbrev>
+            <bibliomixed>
+                <abbrev>9</abbrev>
 Incorporating non-local information into information extraction systems by gibbs sampling. FINKEL, Jenny Rose, GRENAGER, Trond a MANNING, Christopher. 2005. Proceedings of the 43rd annual meeting on association for computational linguistics. s. 363-370.
             </bibliomixed>
-            <bibliomixed><abbrev>10</abbrev>
+            <bibliomixed>
+                <abbrev>10</abbrev>
 Conditional random fields: Probabilistic models for segmenting and labeling sequence data. LAFFERTY, John, MCCALLUM, Andrew a PEREIRA, Fernando C. N. 2001.
             </bibliomixed>
-            <bibliomixed><abbrev>11</abbrev>
+            <bibliomixed>
+                <abbrev>11</abbrev>
 A maximum entropy approach to natural language processing. BERGER, Adam L., PIETRA, Vincent J. Della a PIETRA, Stephen A. Della. s.l. : MIT Press, 1996, Computational linguistics, Zv. 22, s. 39-71.
             </bibliomixed>
-            <bibliomixed><abbrev>12</abbrev>
+            <bibliomixed>
+                <abbrev>12</abbrev>
 The viterbi algorithm. FORNEY, G. David. s.l. : IEEE, 1973, Proceedings of the IEEE, Zv. 61, s. 268-278.
             </bibliomixed>
-            <bibliomixed><abbrev>13</abbrev>
+            <bibliomixed>
+                <abbrev>13</abbrev>
 Support vector machines. MOORE, Andrew W. 2001, Tutorial. School of Computer Science of the Carnegie Mellon University. Available at http://www. cs. cmu. edu/ ̃ awm/tutorials.Accessed August 16, 2009.
             </bibliomixed>
-            <bibliomixed><abbrev>14</abbrev>
+            <bibliomixed>
+                <abbrev>14</abbrev>
 The truth of the F-measure. SASAKI, Yutaka a others. 2007, Teach Tutor mater, Zv. 1, s. 1-5.
             </bibliomixed>
-            <bibliomixed><abbrev>15</abbrev>
+            <bibliomixed>
+                <abbrev>15</abbrev>
 MUC-4 evaluation metrics. CHINCHOR, Nancy. 1992. Proceedings of the 4th conference on Message understanding. s. 22-29.
             </bibliomixed>
             <div xmlns="http://www.w3.org/1999/xhtml" class="role-footnotes">
@@ -591,4 +605,160 @@ https://wiki.openstreetmap.org/wiki/Osm2pgsql
             </div>
         </bibliolist>
     </chapter>
+    <appendix>
+        <title>
+Plán na letný semester
+        </title>
+        <informaltable>
+            <tgroup cols="2">
+                <colspec colname="c1" colwidth="16*"/>
+                <colspec colname="c2" colwidth="84*"/>
+                <tbody valign="top">
+                    <row>
+                        <entry>
+                            <para>
+11.2. – 17.2
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Zlepšenie vnútorných štruktúr pre slová, kandidátov a entity
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+18.2. – 24.2
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Ošetrenie názvov obsahujúcich slová začínajúce malými písmenami
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+25.2. – 3.3.
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Rozdeľovanie viacslovných názvov ak sa nenájde zhoda
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+4.3 – 10.3.
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Rozšírenie vyhľadávania v kontexte
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+11.3. – 17.3
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Ďalšie spracovanie slov ak sa nenájde zhoda
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+18.3. – 24.3.
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Pridanie ďalších kľúčových slov
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+25.3. – 31.3
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Ošetrenie častých skratiek
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+1.4 – 7.4
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Ukladanie všetkých výskytov entity v texte
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+8.4. – 14.4.
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Pridanie možností výstupu: zoznam entít alebo označkovaný text
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+15.4. – 21.4.
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Získanie a anotácia ďalších viet na testovanie a porovnanie
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+22.4. – 28.4.
+                            </para>
+                        </entry>
+                        <entry>
+                            <para>
+Porovnanie s existujúcimi nástrojmi
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>
+29.4 – 5.5.
+                            </para>
+                        </entry>
+                        <entry/>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        <para>
+Priebežné písanie dokumentácie.
+        </para>
+    </appendix>
 </book>
