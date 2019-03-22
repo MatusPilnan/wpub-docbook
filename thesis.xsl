@@ -17,7 +17,7 @@
     </fo:block><fo:block xmlns:fo="http://www.w3.org/1999/XSL/Format" space-before="3pt" text-align="center" font-size="12pt" font-family="sans-serif">
       <xsl:value-of select="/book/bookinfo//affiliation/orgdiv[@role='katedra']"/>
     </fo:block><fo:block xmlns:fo="http://www.w3.org/1999/XSL/Format" space-before="12pt" space-after="1cm" text-align="center">
-      <fo:external-graphic src="url(kizi.pdf)" width="2cm" content-width="scale-to-fit"/>
+      <fo:external-graphic src="url(BP-NER-Pilnan_files\STU-FIIT-zcv.png)" width="6cm" content-width="scale-to-fit"/>
     </fo:block>
 </xsl:template>
 
@@ -183,7 +183,7 @@ task before
 
 <!-- na zaèátku budeme vypisovat jen obsah, žádné seznamy obrázkù, tabulek, pøíkladù apod. -->
 <xsl:param name="generate.toc">
-book      title,toc
+book      title,toc,figure,table
 </xsl:param>
 
 <!-- vìtší okraje kolem formálních nesmyslù -->

@@ -62,10 +62,10 @@ Samotná doména geografických názvov prináša ďalšie problémy. Jedným z�
         </section>
         <section>
             <title>
-Predspracovanie textu
+Predspracovanie textu<indexterm><primary>Predspracovanie textu</primary></indexterm>
             </title>
             <para>
-Kvôli bohatej morfológii slovenského jazyka je nutné pred pokusom o vyhľadávanie entít analyzovaný text predspracovať. Pri predspracovaní textu v prirodzenom jazyku sa využívajú dva hlavné prístupy: lematizácia a stemovanie. Lematizácia je proces, ktorý z vyskloňovanej formy slova odvodí jeho základný tvar. Tento spôsob predspracovania sa javí užitočný, nakoľko názvy entít môžu byť v texte vyskloňované, no v slovníkoch sa nachádzajú len v základnom tvare a vytvárať slovníky všetkých možných tvarov každého názvu by bolo náročné. Problémom tohto prístupu je skutočnosť, že názvy najmä menej rozšírených entít nemusia byť uvedené v slovníkoch na ktorých sú dostupné nástroje založené a preto ich tieto nástroje nebudú vedieť korektne spracovať. Druhou možnosťou je stemovanie, proces úpravy slova na jeho koreň. Na rozdiel od lematizácie, výsledkom stemovania častokrát nie je celé slovo slovenského jazyka. Pri vyhľadávaní stemovaných slov v slovníkoch by teda bolo nutné brať do úvahy zhodu v koreni slova a akúkoľvek príponu. Keďže rôzne slová môžu mať rovnaký koreň, toto by sa mohlo odraziť na vyššom počte zhôd, z ktorých by neskôr mala byť určená konkrétna entita, čo môže mať vplyv na správnosť výsledku. 
+Kvôli bohatej morfológii slovenského jazyka je nutné pred pokusom o vyhľadávanie entít analyzovaný text predspracovať. Pri predspracovaní textu v prirodzenom jazyku sa využívajú dva hlavné prístupy: lematizácia a stemovanie. <indexterm><primary>Predspracovanie textu</primary><secondary>Lematizácia</secondary></indexterm>Lematizácia je proces, ktorý z vyskloňovanej formy slova odvodí jeho základný tvar. Tento spôsob predspracovania sa javí užitočný, nakoľko názvy entít môžu byť v texte vyskloňované, no v slovníkoch sa nachádzajú len v základnom tvare a vytvárať slovníky všetkých možných tvarov každého názvu by bolo náročné. Problémom tohto prístupu je skutočnosť, že názvy najmä menej rozšírených entít nemusia byť uvedené v slovníkoch na ktorých sú dostupné nástroje založené a preto ich tieto nástroje nebudú vedieť korektne spracovať. Druhou možnosťou je <indexterm><primary>Predspracovanie textu</primary><secondary>Stemovanie</secondary></indexterm>stemovanie, proces úpravy slova na jeho koreň. Na rozdiel od lematizácie, výsledkom stemovania častokrát nie je celé slovo slovenského jazyka. Pri vyhľadávaní stemovaných slov v slovníkoch by teda bolo nutné brať do úvahy zhodu v koreni slova a akúkoľvek príponu. Keďže rôzne slová môžu mať rovnaký koreň, toto by sa mohlo odraziť na vyššom počte zhôd, z ktorých by neskôr mala byť určená konkrétna entita, čo môže mať vplyv na správnosť výsledku. 
             </para>
         </section>
         <section>
@@ -80,7 +80,7 @@ Metódy rozpoznávania pomenovaných entít používané v existujúcich nástr
 Lingvistické metódy
                 </title>
                 <para>
-Lingvistické metódy sú vhodné pri malom počte rozpoznávaných druhov entít, nakoľko vyžadujú ručné vytvorenie pravidiel ich vyhľadávania. Zložitosť týchto pravidiel zväčša rastie s počtom druhov entít. Pri malom počte druhov entít je však vytvorenie pravidiel spravidla jednoduchšie ako trénovanie štatistického modelu. Lingvistické metódy tiež využívajú slovníky, kontext či regulárne výrazy. Pri využití slovníkov sa spracovaný text porovnáva so slovníkom, v ktorom je pod názvom entity uložený jej typ, alebo sa porovnáva s viacerými slovníkmi, z ktorých každý obsahuje entity toho istého typu. Kontext predstavuje časť textu v bezprostrednom okolí vyhľadávaného názvu. Dá sa predpokladať, že práve niektoré zo slov v tejto časti textu bude určovať, o aký typ entity sa jedná. Regulárne výrazy sú najužitočnejšie pri entitách ako dátum, čas alebo e-mail, nakoľko tieto entity sú zapísané v špecifickom formáte. Je možné ich však využiť aj pri iných druhoch entít, napríklad na nájdenie slov s veľkým začiatočným písmenom alebo častých skratiek (napríklad akademický titul pri osobách). Jednou z nevýhod použitia lingvistických metód môže byť potreba aktualizácie slovníkov, no pri nami zvolených typoch entít tento problém odpadá, keďže obce, rieky a vrchy menia názvy, vznikajú alebo zanikajú len veľmi zriedka. V prípade potreby rozšírenia slovníkov o entity iných krajín je možné využiť mapové dáta.
+ <indexterm><primary>Lingvistické metódy</primary></indexterm>Lingvistické metódy sú vhodné pri malom počte rozpoznávaných druhov entít, nakoľko vyžadujú ručné vytvorenie pravidiel ich vyhľadávania. Zložitosť týchto pravidiel zväčša rastie s počtom druhov entít. Pri malom počte druhov entít je však vytvorenie pravidiel spravidla jednoduchšie ako trénovanie štatistického modelu. Lingvistické metódy tiež využívajú slovníky, kontext či regulárne výrazy. Pri využití <indexterm><primary>Lingvistické metódy</primary><secondary>Slovníky</secondary></indexterm>slovníkov sa spracovaný text porovnáva so slovníkom, v ktorom je pod názvom entity uložený jej typ, alebo sa porovnáva s viacerými slovníkmi, z ktorých každý obsahuje entity toho istého typu. <indexterm><primary>Lingvistické metódy</primary><secondary>Kontext</secondary></indexterm>Kontext predstavuje časť textu v bezprostrednom okolí vyhľadávaného názvu. Dá sa predpokladať, že práve niektoré zo slov v tejto časti textu bude určovať, o aký typ entity sa jedná. <indexterm><primary>Lingvistické metódy</primary><secondary>Regulárne výrazy</secondary></indexterm>Regulárne výrazy sú najužitočnejšie pri entitách ako dátum, čas alebo e-mail, nakoľko tieto entity sú zapísané v špecifickom formáte. Je možné ich však využiť aj pri iných druhoch entít, napríklad na nájdenie slov s veľkým začiatočným písmenom alebo častých skratiek (napríklad akademický titul pri osobách). Jednou z nevýhod použitia lingvistických metód môže byť potreba aktualizácie slovníkov, no pri nami zvolených typoch entít tento problém odpadá, keďže obce, rieky a vrchy menia názvy, vznikajú alebo zanikajú len veľmi zriedka. V prípade potreby rozšírenia slovníkov o entity iných krajín je možné využiť mapové dáta.
                 </para>
             </section>
             <section>
@@ -88,16 +88,16 @@ Lingvistické metódy sú vhodné pri malom počte rozpoznávaných druhov entí
 Štatistické metódy
                 </title>
                 <para>
-Štatistické metódy sa zväčša používajú v systémoch s viacerými typmi entít, ktoré sú všeobecnejšie (napríklad lokalita, osoba a pod.) a využívajú metódy strojového učenia. Spravidla sa jedná o učenie s učiteľom, ktoré je pre tento typ úloh najvhodnejšie. Z toho však plynie potreba veľkého množstva anotovaných vstupných dát na správne natrénovanie štatistického modelu. Dostupné systémy pre slovenský jazyk používajú z pohľadu štatistických metód trénovanie metódy výberu 
+<indexterm><primary>Štatistické metódy</primary></indexterm>Štatistické metódy sa zväčša používajú v systémoch s viacerými typmi entít, ktoré sú všeobecnejšie (napríklad lokalita, osoba a pod.) a využívajú metódy strojového učenia. Spravidla sa jedná o učenie s učiteľom, ktoré je pre tento typ úloh najvhodnejšie. Z toho však plynie potreba veľkého množstva anotovaných vstupných dát na správne natrénovanie štatistického modelu. Dostupné systémy pre slovenský jazyk používajú z pohľadu štatistických metód trénovanie metódy výberu 
                     <citation>2</citation>
 , alebo hybridnú metódu, pri ktorej sa informácie získané lingvistickou metódou používajú ako črty pri ďalšom spracovaní štatistickým modelom natrénovaným na ručne anotovaných dokumentoch 
                     <citation>3</citation>
 . V nástrojoch pre české texty patria medzi používané štatistické metódy podmienené náhodné polia 
-                    <citation>45</citation>
+                    <citation>4</citation><citation>5</citation>
 , algoritmy podporných vektorov 
                     <citation>6</citation>
  a metóda maximálnej entropie 
-                    <citation>78</citation>
+                    <citation>7</citation><citation>8</citation>
 . Metóda podmienených náhodných polí je taktiež použitá v jednom z najznámejších nástrojov na rozpoznávanie pomenovaných entít pre anglický jazyk, Stanford NER 
                     <citation>9</citation>
 .
@@ -157,8 +157,8 @@ Pre češtinu existujú systémy na vyššej úrovni, ktoré pokrývajú viac dr
 Podmienené náhodné polia
                     </title>
                     <para>
-                        <citation>45</citation>
- využívajú podmienené náhodné polia (conditional random fields). Tie sú reprezentované ako konečný stavový model 
+                        <citation>4</citation><citation>5</citation>
+ využívajú <indexterm><primary>Štatistické metódy</primary><secondary>Podmienené náhodné polia</secondary></indexterm>podmienené náhodné polia (conditional random fields). Tie sú reprezentované ako konečný stavový model 
                         <citation>10</citation>
 . Pre klasifikáciu využíva postupnosť dát, ktoré majú byť označené – v našom prípade vstupný text, a postupnosť možných značiek. Výhodou CRF oproti iným štatistickým metódam je, že pri klasifikácii jednej entity berie do úvahy aj ostatné entity vyskytujúce sa v texte. Práca 
                         <citation>4</citation>
@@ -169,12 +169,12 @@ Nástroj navrhnutý v
                         <citation>5</citation>
  klasifikuje entity podľa dvojstupňového rozdelenia navrhnutého v 
                         <citation>1</citation>
-, známeho ako Czech Named Entity Corpus (CNEC). Pri tomto rozdelení sa vyskytujú entity rovnakej úrovne ako nami zvolené – geografické entity sú jednou z hlavných kategórií rozdelenia, s podkategóriami ako mestá, štáty, vodné plochy a podobne. Tento nástroj preto musí riešiť aj problém zapuzdrenia názvov entít, kedy názov jednej entity obsahuje názov inej (napríklad Žiar nad Hronom – jednou entitou je celý názov označujúci mesto, druhou slovo Hron označujúce rieku). Nástroj v tomto prípade označí ako entity oba názvy. Toto však v našej práci nie je žiadané správanie, nakoľko text v ktorom sa spomína Žiar nad Hronom sa riekou Hron vôbec nemusí zaoberať. Niektoré črty používané pri klasifikácii sú lemy, prípony a predpony slov, slovníky a iné. Tento nástroj dosiahol F-skóre 74,08%
+, známeho ako <indexterm><primary>Czech Named Entity Corpus (CNEC)</primary></indexterm>Czech Named Entity Corpus (CNEC). Pri tomto rozdelení sa vyskytujú entity rovnakej úrovne ako nami zvolené – geografické entity sú jednou z hlavných kategórií rozdelenia, s podkategóriami ako mestá, štáty, vodné plochy a podobne. Tento nástroj preto musí riešiť aj problém zapuzdrenia názvov entít, kedy názov jednej entity obsahuje názov inej (napríklad Žiar nad Hronom – jednou entitou je celý názov označujúci mesto, druhou slovo Hron označujúce rieku). Nástroj v tomto prípade označí ako entity oba názvy. Toto však v našej práci nie je žiadané správanie, nakoľko text v ktorom sa spomína Žiar nad Hronom sa riekou Hron vôbec nemusí zaoberať. Niektoré črty používané pri klasifikácii sú lemy, prípony a predpony slov, slovníky a iné. Tento nástroj dosiahol F-skóre 74,08%
                     </para>
                 </section>
                 <section>
                     <title>
-Metóda maximálnej entropie
+Metóda maximálnej entropie<indexterm><primary>Štatistické metódy</primary><secondary>Metóda maximálnej entropie</secondary></indexterm>
                     </title>
                     <para>
 Ďalšími nástrojomi vyvinutými pre české texty sú NameTag  
@@ -195,7 +195,7 @@ Metóda maximálnej entropie
 Algoritmy podporných vektorov
                     </title>
                     <para>
-Pre český jazyk taktiež existuje nástroj využívajúci alogoritmy podporných vektorov 
+Pre český jazyk taktiež existuje nástroj využívajúci <indexterm><primary>Štatistické metódy</primary><secondary>Alogoritmy podporných vektorov</secondary></indexterm>alogoritmy podporných vektorov 
                         <citation>6</citation>
 , ktorý pracuje na tej istej skupine typov entít ako predchádzajúce dva uvedené nástroje. Tento prístup využíva reprezentáciu slov ako bodov v priestore. Na základe známych dát je priestor rozdelený priamkou na dve časti tak, aby každá obsahovala len entity jedného typu. Každý z vzniknutých polpriestorov reprezentuje jednu triedu. V prípade že takéto rozdelenie nie je možné, prípustné sú aj entity v nesprávnej kategórii, pri týchto sa musí minimalizovať vzdialenosť od hranice 
                         <citation>13</citation>
@@ -208,9 +208,9 @@ Pre český jazyk taktiež existuje nástroj využívajúci alogoritmy podporný
 Porovnanie nástrojov
                 </title>
                 <para>
-V praxi sa na vyhodnotenie úspešnosti systémov na rozpoznávanie pomenovaných entít používa metrika F-skóre. F-skóre vyjadruje harmonický priemer presnosti (precision) a úplnosti (recall) systému 
+V praxi sa na vyhodnotenie úspešnosti systémov na rozpoznávanie pomenovaných entít používa metrika <indexterm><primary>Metriky</primary><secondary>F-skóre</secondary></indexterm>F-skóre. F-skóre vyjadruje harmonický priemer presnosti (precision) a úplnosti (recall) systému 
                     <citation>14</citation>
-. Precision vyjadruje pomer počtu správne určených entít k celkovému počtu určených entít a recall vyjadruje pomer počtu správne určených entít k celkovému počtu entít ktoré sa v texte vyskytovali 
+. <indexterm><primary>Metriky</primary><secondary>Precision</secondary></indexterm>Precision vyjadruje pomer počtu správne určených entít k celkovému počtu určených entít a <indexterm><primary>Metriky</primary><secondary>Recall</secondary></indexterm>recall vyjadruje pomer počtu správne určených entít k celkovému počtu entít ktoré sa v texte vyskytovali 
                     <citation>15</citation>
 . Hodnoty F-skóre uvedené pri nástrojoch sú dosiahnuté výsledky uvádzané autormi jednotlivých nástrojov.
                 </para>
@@ -340,7 +340,7 @@ NLP4SK
                 <para>
 Z výsledkov testovania nástrojov vyplýva, že nad doménou geografických názvov najlepšie pracuje nástroj NLP4SK. Nástroj 
                     <citation>3</citation>
- často označoval ako entity slová, ktoré nimi neboli, väčšinou začiatky viet – pravdepodobne kvôli veľkým písmenám. Častým problémom bolo aj označenie správneho slova, no určenie nesprávneho typu entity – väčšina slov bola označená ako osoba. Ďalším problémom bolo označovanie miest ako súdov, čo je pravdepodobne spôsobené zameraním nástroja na oblasť súdnictva. V niekoľkých prípadoch nástroj správne určil typ, no rozsah nie, napríklad postupnosť názvov miest oddelených čiarkami označil ako jednu adresu. Nástroj NameTag často označoval geografické názvy ako mená osôb. Problém mal s vrchmi aj menej známymi obcami. Nižšia úspešnosť tohto nástroja sa dala predpokladať, nakoľko bol navrhnutý pre češtinu, ktorá má mierne odlišné pravidlá skloňovania, čo mohlo byť jednou z príčin neúspechu pri vyskloňovaných názvoch. Relatívne vysoká úspešnosť nástroja NLP4SK bola spôsobená aj tým, že v prípadoch, keď nájdená entita môže patriť do viacerých kategórií, nástroj vráti všetky. Pri testovaní sme za správne označenú entitu považovali tú, ktorá mala medzi vrátenými kategóriami tú správnu. Text použitý pri testovaní nástrojov s označenými výstupmi jednotlivých nástrojov je v Prílohe B.
+ často označoval ako entity slová, ktoré nimi neboli, väčšinou začiatky viet – pravdepodobne kvôli veľkým písmenám. Častým problémom bolo aj označenie správneho slova, no určenie nesprávneho typu entity – väčšina slov bola označená ako osoba. Ďalším problémom bolo označovanie miest ako súdov, čo je pravdepodobne spôsobené zameraním nástroja na oblasť súdnictva. V niekoľkých prípadoch nástroj správne určil typ, no rozsah nie, napríklad postupnosť názvov miest oddelených čiarkami označil ako jednu adresu. Nástroj NameTag často označoval geografické názvy ako mená osôb. Problém mal s vrchmi aj menej známymi obcami. Nižšia úspešnosť tohto nástroja sa dala predpokladať, nakoľko bol navrhnutý pre češtinu, ktorá má mierne odlišné pravidlá skloňovania, čo mohlo byť jednou z príčin neúspechu pri vyskloňovaných názvoch. Relatívne vysoká úspešnosť nástroja NLP4SK bola spôsobená aj tým, že v prípadoch, keď nájdená entita môže patriť do viacerých kategórií, nástroj vráti všetky. Pri testovaní sme za správne označenú entitu považovali tú, ktorá mala medzi vrátenými kategóriami tú správnu. Text použitý pri testovaní nástrojov s označenými výstupmi jednotlivých nástrojov je v Prílohe A.
                 </para>
             </section>
             <section>
@@ -373,7 +373,7 @@ Google Knowledge Graph
 Open Street Map
                 </title>
                 <para>
-Pre doménu geografických entít sa zdá byť vhodné použitie mapových dát. Projekt Open Street Map (OSM)
+Pre doménu geografických entít sa zdá byť vhodné použitie <indexterm><primary>Mapy</primary></indexterm>mapových dát. Projekt Open Street Map (OSM)
                     <footnote id="__FN6__">
                         <para>
                         <ulink url="https://www.openstreetmap.org/about" />
@@ -440,15 +440,10 @@ Prototyp
             <para>
 Aplikáciu sme sa rozhodli vytvoriť v programovacom jazyku Python. Prvý prototyp aplikácie najprv pomocou webového lematizéra 
                 <citation>3</citation>
- predspracuje vstupný text. Následne sa text spracováva po vetách. Pre každé slovo sa najprv overí, či sa začína veľkým písmenom. Pokiaľ áno, označí sa toto slovo ako možný začiatok entity – kandidát. K názvu takto vytvoreného kandidátova sa pridajú aj všetky nasledujúce slová začínajúce veľkým písmenom.
-            </para>
-            <para>
-Postup práce prototypu
-            </para>
-            <para>
+ predspracuje vstupný text. Následne sa text spracováva po vetách. Pre každé slovo sa najprv overí, či sa začína veľkým písmenom. Pokiaľ áno, označí sa toto slovo ako možný začiatok entity – kandidát (<xref linkend="o1" />). K názvu takto vytvoreného kandidáta sa pridajú aj všetky nasledujúce slová začínajúce veľkým písmenom. 
 Pokiaľ  sa za postupnosťou slov začínajúcich veľkými písmenami nachádza predložka a ďalšie slovo začínajúce veľkým písmenom, pridá sa k názvu aj toto. Každý kandidát má tiež v sebe uložené 3 slová v okolí názvu – kontext. Slová, ktoré už boli v jednom názve použité sa do iných názvov nedostanú. Keď sa takto vytypujú všetci kandidáti, porovnávajú sa ich názvy so slovníkmi obcí, riek a vrchov. Názov, ktorý sa vyhľadáva v databáze sa vyskladá z lem slov z názvu kandidáta, okrem slov za predložkami, ktoré ostávajú v pôvodnom tvare.  V prípade, že sa nájde práve jedna zhoda, na základe daného kandidáta sa vytvorí entita príslušného typu a uloží sa medzi nájdené entity. Pokiaľ nastane zhoda vo viacerých kategóriách, kontroluje sa kontext. Typ sa určí podľa kontextových slov pred názvom (slová ako rieka, mesto, obec a podobne). Viacnásobná zhoda v rámci kategórie zatiaľ nie je ošetrená.
             </para>
-            <figure>
+            <figure id="o1">
                 <title>
 Proces vytipovania kandidátov
                 </title>
@@ -458,20 +453,16 @@ Proces vytipovania kandidátov
                     </imageobject>
                 </mediaobject>
             </figure>
+Výstupom je zoznam nájdených entít so základnými informáciami o nich. Do prototypu bude nutné pridať kvalitnejšie predspracovanie (napríklad použitie stemera v prípadoch keď sa nenájde lema slova), kontrolu kratších názvov, pokiaľ sa nenájde zhoda s viacslovným názvom (napríklad v situácii, keď názov entity začína na druhom slove vety sa zhoda nenájde, pretože aplikácia navrhne ako kandidáta na jednu entitu začiatok vety spolu s akýmikoľvek nasledujúcimi slovami začínajúcimi veľkým písmenom). Taktiež bude potrebné ošetriť prípady viacnásobnej zhody v jednej kategórii a prípad, keď nebude možné určiť typ entity na základe kontextu. V týchto prípadoch plánujeme využiť dovtedy nájdené entity a geografickú vzdialenosť novej entity od nich (brať sa bude najbližšia možnosť).
             <figure>
                 <title>
 Odvodzovanie názvu pre dopyt do slovníka
                 </title>
-                <blockquote>
-                    <para>
-Výstupom je zoznam nájdených entít so základnými informáciami o nich. Do prototypu bude nutné pridať kvalitnejšie predspracovanie (napríklad použitie stemera v prípadoch keď sa nenájde lema slova), kontrolu kratších názvov, pokiaľ sa nenájde zhoda s viacslovným názvom (napríklad v situácii, keď názov entity začína na druhom slove vety sa zhoda nenájde, pretože aplikácia navrhne ako kandidáta na jednu entitu začiatok vety spolu s akýmikoľvek nasledujúcimi slovami začínajúcimi veľkým písmenom). Taktiež bude potrebné ošetriť prípady viacnásobnej zhody v jednej kategórii a prípad, keď nebude možné určiť typ entity na základe kontextu. V týchto prípadoch plánujeme využiť dovtedy nájdené entity a geografickú vzdialenosť novej entity od nich (brať sa bude najbližšia možnosť).
-                        <inlinemediaobject>
-                            <imageobject>
-                                <imagedata fileref="BP-NER-Pilnan_files/image3.png" contentwidth="601" contentdepth="212"/>
-                            </imageobject>
-                        </inlinemediaobject>
-                    </para>
-                </blockquote>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="BP-NER-Pilnan_files/image3.png" contentwidth="601" contentdepth="212"/>
+                    </imageobject>
+                </mediaobject>
             </figure>
             <figure>
                 <title>
@@ -605,160 +596,14 @@ https://wiki.openstreetmap.org/wiki/Osm2pgsql
             </div>
         </bibliolist>
     </chapter>
+    <index />
     <appendix>
         <title>
-Plán na letný semester
+Text použitý pri porovnávaní nástrojov
         </title>
-        <informaltable>
-            <tgroup cols="2">
-                <colspec colname="c1" colwidth="16*"/>
-                <colspec colname="c2" colwidth="84*"/>
-                <tbody valign="top">
-                    <row>
-                        <entry>
-                            <para>
-11.2. – 17.2
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Zlepšenie vnútorných štruktúr pre slová, kandidátov a entity
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-18.2. – 24.2
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Ošetrenie názvov obsahujúcich slová začínajúce malými písmenami
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-25.2. – 3.3.
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Rozdeľovanie viacslovných názvov ak sa nenájde zhoda
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-4.3 – 10.3.
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Rozšírenie vyhľadávania v kontexte
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-11.3. – 17.3
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Ďalšie spracovanie slov ak sa nenájde zhoda
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-18.3. – 24.3.
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Pridanie ďalších kľúčových slov
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-25.3. – 31.3
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Ošetrenie častých skratiek
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-1.4 – 7.4
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Ukladanie všetkých výskytov entity v texte
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-8.4. – 14.4.
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Pridanie možností výstupu: zoznam entít alebo označkovaný text
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-15.4. – 21.4.
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Získanie a anotácia ďalších viet na testovanie a porovnanie
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-22.4. – 28.4.
-                            </para>
-                        </entry>
-                        <entry>
-                            <para>
-Porovnanie s existujúcimi nástrojmi
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para>
-29.4 – 5.5.
-                            </para>
-                        </entry>
-                        <entry/>
-                    </row>
-                </tbody>
-            </tgroup>
-        </informaltable>
-        <para>
-Priebežné písanie dokumentácie.
-        </para>
+<para>
+Nasledujúci text bol použitý pri porovnávaní dostupných nástrojov na rozpoznávanie pomenovaných entít. Hľadané entity sú v texte podčiarknuté. Celkovo ich je v texte 123: 55 obcí, 27 vrchov, 21 riek a 20 iných.. Testovanie bolo vykonané 7.12.2018.
+</para>
+<para>Meteorologická stanica na <emphasis role="underline">Malom Javorníku</emphasis> neďaleko <emphasis role="underline">Svätého Jura</emphasis> hlási nízke teploty. Na starom hraničnom priechode <emphasis role="underline">Jarovce</emphasis> - <emphasis role="underline">Kittsee</emphasis> došlo k vážnej dopravnej nehode. Operačné stredisko Krajského riaditeľstva Hasičského a záchranného zboru v <emphasis role="underline">Bratislave</emphasis> priblížilo, že účastníkom nehody malo byť jedno vozidlo. Poľadovicu cestári hlásia najmä v okolí <emphasis role="underline">Hurbanova</emphasis> a <emphasis role="underline">Tisovca</emphasis>. Z nevyužívanej búdy v <emphasis role="underline">Prednom sedle</emphasis> pod <emphasis role="underline">Kráľovou hoľou</emphasis> sa po rekonštrukcii stala menšia horská chata. Smerom k <emphasis role="underline">Orliemu vrchu</emphasis> sa hrebeňový chodník mení na galeje. Škoda, lebo sa nám otvárajú prvé výhľady na <emphasis role="underline">Kráľovu hoľu</emphasis>. Za ďalšou rampou si zvolíme jednoduchší traverz, ktorý nás dovedie k osamelým skalám, od ktorých vidíme prvý dnešný vrchol – <emphasis role="underline">Bukovec</emphasis>. Hrádza <emphasis role="underline">Dunaja</emphasis>, miesto ospevované, ale aj preklínané. Opačná strana hrádze zvaná aj bratislavská začína na <emphasis role="underline">Pálenisku</emphasis> a jej vyasfaltovaná časť končí pri obci <emphasis role="underline">Medveďov</emphasis>. K chodníku prichádzame od obce <emphasis role="underline">Uličské Krivé</emphasis>. Trasa vedie ďalej vedľa vrcholu <emphasis role="underline">Bablička</emphasis> (405 m, výhľady), prejdeme cez mostík ponad <emphasis role="underline">Uličku</emphasis> a pokračujeme žltou značkou. Keďže náučný chodník je krátky, návštevu môžeme spojiť s výstupom na vrchol <emphasis role="underline">Holica</emphasis>. V <emphasis role="underline">Uliči</emphasis>, v starom parku na druhej strane cesty, sa nachádza minigaléria drevených kostolíkov. Polícia preveruje nahlásenie bomby v nákupnom centre v <emphasis role="underline">Sečovciach</emphasis>. Príslušníci Hasičského a záchranného zboru z <emphasis role="underline">Dubnice nad Váhom</emphasis> zasahovali v pondelok popoludní pri dopravnej nehode, ktorá sa stala na moste cez inundačný kanál <emphasis role="underline">Váhu</emphasis> v <emphasis role="underline">Ilave</emphasis>. Prítokom <emphasis role="underline">Váhu</emphasis> sú napríklad rieky <emphasis role="underline">Orava</emphasis>, <emphasis role="underline">Kysuca</emphasis>, <emphasis role="underline">Demänovka</emphasis>, <emphasis role="underline">Ľubochnianka</emphasis>, <emphasis role="underline">Nitra</emphasis> a ďalšie. Rieka <emphasis role="underline">Morava</emphasis> priteká z <emphasis role="underline">Čiech</emphasis>, pod <emphasis role="underline">Devínom</emphasis> sa vlieva do <emphasis role="underline">Dunaja</emphasis>. Vlieva sa do rieky <emphasis role="underline">Dunaj</emphasis>, pri meste <emphasis role="underline">Štúrovo</emphasis>. <emphasis role="underline">Čierny Váh</emphasis> pramení na <emphasis role="underline">Kráľovej holi</emphasis> a <emphasis role="underline">Biely Váh</emphasis> pod vrcholom <emphasis role="underline">Kriváň</emphasis> vo <emphasis role="underline">Vysokých Tatrách</emphasis>. Prítokom <emphasis role="underline">Váhu</emphasis> je aj <emphasis role="underline">Kysuca</emphasis>, ktorá pramení v <emphasis role="underline">Javorníkoch</emphasis>. <emphasis role="underline">Kysuca</emphasis> sa do <emphasis role="underline">Váhu</emphasis> vlieva v <emphasis role="underline">Žiline</emphasis>. <emphasis role="underline">Tisa</emphasis> odvodňuje východné <emphasis role="underline">Slovensko</emphasis> a na našom území tvorí hranicu s <emphasis role="underline">Maďarskom</emphasis> na krátkom úseku pri <emphasis role="underline">Čiernej nad Tisou</emphasis>. Kam sa len pozriem, všade sa na mňa valia spomienky – <emphasis role="underline">Plavecký hrad</emphasis>, <emphasis role="underline">Pohanská</emphasis>, <emphasis role="underline">Roštún</emphasis>, <emphasis role="underline">Geldek</emphasis>, <emphasis role="underline">Biela skala</emphasis>, <emphasis role="underline">Vysoká</emphasis> so svojimi predvrcholmi, všade som tam bol. Odtiaľto mám perfektný výhľad na <emphasis role="underline">Veľký Petrklín</emphasis>, len na fotografovanie to kvôli protisvetlu nie je ideálne. V prvej časti príbehu som opísal časť prechodu nízkotatranskej hrebeňovky od <emphasis role="underline">Donovalov</emphasis> až po <emphasis role="underline">Chatu generála Milana Rastislava Štefánika</emphasis> pod <emphasis role="underline">Ďumbierom</emphasis>. Na východ vidím <emphasis role="underline">Zadnú hoľu</emphasis>, <emphasis role="underline">Oravcovú</emphasis>, <emphasis role="underline">Kolesárovú</emphasis>, za ňou len mierne trčí <emphasis role="underline">Veľká Vápenica</emphasis>, ale ja sa nenechám popliesť – výstup na ňu z <emphasis role="underline">Priehyby</emphasis> bude päťstometrová “mňamka”.  Keď sa vraciam k batohu, z <emphasis role="underline">Kolesárovej</emphasis> prichádza partia turistov (neskôr sa dozviem, že sú železničiari z <emphasis role="underline">Martina</emphasis>).  Namiesto jedného vlaku pôjde priamo do <emphasis role="underline">Trenčína</emphasis> a z <emphasis role="underline">Trenčína</emphasis> až 18 vlakov bez nutnosti prestupu v <emphasis role="underline">Novom Meste nad Váhom</emphasis>. V prípade ide o lúpež v rodinnom dome v obci <emphasis role="underline">Biel</emphasis> (okr. <emphasis role="underline">Trebišov</emphasis>). Rieka <emphasis role="underline">Hnilec</emphasis> patrí tiež medzi rieky, ktoré pramenia pod <emphasis role="underline">Kráľovou hoľou</emphasis>. Vlieva sa do <emphasis role="underline">Hornádu</emphasis> a jej dĺžka činí 89 km. Polícia pátra po 25-ročnom <emphasis role="underline">Petrovi Králikovi</emphasis> zo <emphasis role="underline">Zvolena</emphasis>. Ešte 20. augusta tohto roka vo večerných hodinách, sa stala v <emphasis role="underline">Lučenci</emphasis> dopravná nehoda. Tragédia na zámku v <emphasis role="underline">Hlohovci</emphasis>: Pri inštalácii výťahu zahynul jeden pracovník. Počas rodičovského združenia na Základnej škole na Ulici mieru v <emphasis role="underline">Bytči</emphasis> sa stala smutná udalosť. V okolí <emphasis role="underline">Nižnej Šebastovej</emphasis>, <emphasis role="underline">Záborského</emphasis> a <emphasis role="underline">Chmianskej Novej Vsi</emphasis> je hmla s dohľadnosťou len do 50 metrov. <emphasis role="underline">Trnavský samosprávny kraj</emphasis> za rok od nástupu nového vedenia vyriešil kauzu resocializačného zariadenia <emphasis role="underline">Čistý deň</emphasis>, zachránil pred likvidáciou letisko v <emphasis role="underline">Piešťanoch</emphasis>, rozhodol o skončení zmluvy s neželaným poskytovateľom robotníckeho ubytovania vo <emphasis role="underline">Voderadoch</emphasis> a začal s prípravou najväčšej investičnej akcie v kraji, ktorou je riešenie dopravnej situácie v meste <emphasis role="underline">Hlohovec</emphasis>. Polícia krátko po prijatí oznámenia o vlámaní v <emphasis role="underline">Chorvátskom Grobe</emphasis> (okres <emphasis role="underline">Senec</emphasis>) zadržala podozrivého muža, ktorý už čelí obvineniu z majetkovej trestnej činnosti. Pre hmlu, silný dážď alebo dažďové prehánky je podľa cestárov dohľadnosť do 100 metrov v lokalitách <emphasis role="underline">Dobšiná</emphasis>, <emphasis role="underline">Fričovce</emphasis>, <emphasis role="underline">Liptovské Matiašovce</emphasis>, <emphasis role="underline">Bertotovce</emphasis>, <emphasis role="underline">Liptovský Hrádok</emphasis>, <emphasis role="underline">Trebišov</emphasis>, <emphasis role="underline">Veľké Kapušany</emphasis>, <emphasis role="underline">Štítnik</emphasis>, <emphasis role="underline">Kremnica</emphasis>, <emphasis role="underline">Sečovce</emphasis>, <emphasis role="underline">Michalovce</emphasis>, <emphasis role="underline">Plešivec</emphasis>, <emphasis role="underline">Rožňava</emphasis> a <emphasis role="underline">Široké</emphasis>. V okolí <emphasis role="underline">Veľkého Krtíša</emphasis> je hmla s dohľadnosťou len do 50 metrov. V meste pod <emphasis role="underline">Urpínom</emphasis> sa prvýkrát v histórii uskutoční hokejový zápas pod otvoreným nebom. <emphasis role="underline">Manínska tiesňava</emphasis> sa nachádza v <emphasis role="underline">Považskej Teplej</emphasis>, v mestskej časti <emphasis role="underline">Považskej Bystrice</emphasis>. Výškový rozdiel medzi dnom úžiny a vrcholom <emphasis role="underline">Veľkého Manína</emphasis> je takmer 400 metrov. Z <emphasis role="underline">Čutkova</emphasis> sa dostanete červeno značeným turistickým chodníkom na <emphasis role="underline">Tlstú horu</emphasis>, prípadne modrou značkou do sedla pod <emphasis role="underline">Vtáčnikom</emphasis>. V blízkosti sa nachádza i kabínková lanovka na <emphasis role="underline">Malinô Brdo</emphasis>, v prevádzke je počas zimných i letných mesiacov. Ak nemáte bicykel, môžete si ho požičať a preskúmať aj iné miesta ako <emphasis role="underline">Vlkolínec</emphasis>, <emphasis role="underline">Bešeňová</emphasis>, <emphasis role="underline">Korytnica</emphasis> či <emphasis role="underline">Smrekovica</emphasis>. Múzeum liptovskej dediny sa nachádza za obcou <emphasis role="underline">Pribylina</emphasis> v smere na <emphasis role="underline">Podbanské</emphasis>, približne 21 km od <emphasis role="underline">Liptovského Mikuláša</emphasis> smerom na severovýchod.</para>
     </appendix>
 </book>
