@@ -487,7 +487,7 @@ Vyhodnocovanie úspešnosti navrhnutej metódy budeme realizovať pomocou F-skó
             </para>
         </section>
     </chapter>
-    <chapter>
+    <bibliography>
         <title>
 Použitá literatúra
         </title>
@@ -553,7 +553,7 @@ The truth of the F-measure. SASAKI, Yutaka a others. 2007, Teach Tutor mater, Zv
 MUC-4 evaluation metrics. CHINCHOR, Nancy. 1992. Proceedings of the 4th conference on Message understanding. s. 22-29.
             </bibliomixed>
         </bibliolist>
-    </chapter>
+    </bibliography>
     <index />
     <appendix>
         <title>
